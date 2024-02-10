@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A8BDBF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="302dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="casual"
+        android:text="Zen Zone"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#387F75"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/sections"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="0dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/breathing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="384dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="0dp"
+        android:fontFamily="casual"
+        android:text="Take a second to focus on yourself! You deserve to feel zen. Pick an activity below."
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/sections"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appName" />
+
+    <ImageButton
+        android:id="@+id/breathing"
+        android:layout_width="120dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#387F75"
+        app:layout_constraintBottom_toTopOf="@+id/breathingText"
+        app:layout_constraintEnd_toStartOf="@+id/noise"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sections"
+        app:srcCompat="@drawable/breathing" />
+
+    <ImageButton
+        android:id="@+id/noise"
+        android:layout_width="120dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="#7BBCB6"
+        app:layout_constraintBottom_toTopOf="@+id/satisfy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/breathing"
+        app:layout_constraintTop_toBottomOf="@+id/sections"
+        app:srcCompat="@drawable/sounds" />
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="59dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toTopOf="@+id/appName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/zenzone" />
+
+    <TextView
+        android:id="@+id/breathingText"
+        android:layout_width="120dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="casual"
+        android:text="Feeling stressed? Feeling anxious?"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/satisfy"
+        app:layout_constraintEnd_toStartOf="@+id/satisfy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breathing" />
+
+    <TextView
+        android:id="@+id/satisfy"
+        android:layout_width="121dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="casual"
+        android:text="Feeling unsatisfied? Feeling unfocused?"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/breathing"
+        app:layout_constraintTop_toBottomOf="@+id/noise" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
