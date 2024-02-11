@@ -47,8 +47,7 @@ public class ThirdActivity extends AppCompatActivity
         breathe = findViewById(R.id.textView5);
 
         Button startPause = findViewById(R.id.button);
-        startPause.setOnClickListener(new View.OnClickListener()
-        {
+        startPause.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view)
             {

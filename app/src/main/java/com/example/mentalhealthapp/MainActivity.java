@@ -27,11 +27,16 @@ public class MainActivity extends AppCompatActivity {
         breathingBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                startActivity(new Intent(MainActivity.this, ThirdActivity.class));
+              //  startActivity(new Intent(MainActivity.this, ThirdActivity.class));
+                openBreathingActivity();
             }
         });
     }
-
+    public void openBreathingActivity()
+    {
+        Intent intent = new Intent(this, ThirdActivity.class);
+        startActivity(intent);
+    }
 
 
 }
