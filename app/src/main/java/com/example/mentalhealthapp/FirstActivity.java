@@ -33,6 +33,11 @@ public class FirstActivity extends AppCompatActivity {
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
+                if (audios != null && audios.isPlaying()) {
+                    audios.stop();
+                    audios.release();
+                    audios = null;
+                }
                 startActivity(new Intent(FirstActivity.this, MainActivity.class));
             }
         });
